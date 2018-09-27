@@ -34,3 +34,13 @@ function addItems(e) {
   //Append li to list
   itemList.appendChild(li);
 }
+
+//Remove Item Function
+function removeItems(e) {
+  if (e.target.classList.contains('delete')) {
+    if (confirm('Confirm Delete')) {
+      var li = e.target.parentElement;
+      itemList.removeChild(li);
+    }
+  }
+}
